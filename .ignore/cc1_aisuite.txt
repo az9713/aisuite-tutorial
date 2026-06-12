@@ -1,0 +1,760 @@
+              ~\Downloads\aisuite-main              │ /release-notes for more │
+╭─── Claude Code v2.1.175 ─────────────────────────────────────────────────────╮│                                                    │ Tips for getting        │
+│                 Welcome back Simon!                │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ What's new              │
+│                        ▘▘ ▝▝                       │ Added `enforceAvailabl… │
+│   Opus 4.8 (1M context) with hi… · Claude Max ·    │ Added `wheelScrollAcce… │
+│   az9713@yahoo.com's Organization                  │ Fixed the `/model` pic… │
+│              ~\Downloads\aisuite-main              │ /release-notes for more │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+ ‼ 3 setup issues: MCP · /doctor
+
+> /technical-docs-writer
+
+> /remote-control
+  ⎿  /rc connecting…
+
+● I'll write production-quality documentation for the aisuite project. Let me
+  start with Phase 1: Audit — understanding what I'm documenting.               
+  Read 3 files, listed 1 directory (ctrl+o to expand)
+
+● This is a substantial multi-component system. Let me read the existing docs
+  and key source files to understand it deeply.
+
+  Read 2 files, listed 1 directory (ctrl+o to expand)
+
+● Let me read the existing quickstarts and explore the package internals in
+  depth.
+
+  Read 3 files (ctrl+o to expand)
+
+● Bash(cd aisuite && echo "===AISUITE PKG===" && find . -name '*.py' | grep -v
+      __pycache__ | sort && echo "" && echo "===__init__===" && cat __init__.py)
+  ⎿  ===AISUITE PKG===
+     ./__init__.py
+     ./agents/__init__.py
+     … +133 lines (ctrl+o to expand)
+
+● This is a layered multi-component system. Let me read the core source files to
+  document accurately before planning the IA.
+
+  Read 3 files (ctrl+o to expand)
+
+● I now understand the core architecture well. Let me gather deep detail on the   remaining subsystems in parallel while I confirm scope with you.
+
+● 4 background agents launched (↓ to manage)
+   ├ Map providers + framework
+   ├ Map agents subsystem
+   ├ Map MCP + tracing + toolkits
+● 4 background agents launched (↓ to manage)
+   ├ Map providers + framework
+   ├ Map agents subsystem
+   ├ Map MCP + tracing + toolkits
+   └ Map platform/OpenCoworker + cli + js
+
+● User declined to answer questions
+  ⎿  · aisuite is a multi-component repo. The Python library (Chat Completions +
+     Agents API + toolkits + MCP + tracing) and OpenCoworker are clearly the
+     core. How deeply should I document the secondary components — aisuite-js
+     (TypeScript port), the CLI, and viewer-ui (tracing viewer)? (Full coverage
+     (Recommended) / Python + OpenCoworker deep, rest light / Python library
+     only)
+     · The repo already has docs/ with 3 quickstarts (chat-completions, agents,      opencoworker). How should I treat them? (Keep & integrate (Recommended) /
+     Keep but rewrite to match)
+                                                                                > lease  ask the questions a                                                      ⎿  Interrupted · What should Claude do instead?
+                                                                                ● Agent "Map agents subsystem" completed · 6m 18s                                                                                                               ● It looks like the question prompt got interrupted. Let me re-ask — these two    scope decisions shape the whole doc set.                                                                                                                      ● User answered Claude's questions:
+  ⎿  · aisuite is a multi-component repo. The Python library (Chat Completions +     Agents API + toolkits + MCP + tracing) and OpenCoworker are clearly the         core. How deeply should I document the secondary components — aisuite-js        (TypeScript port), the CLI, and viewer-ui (tracing viewer)? → Full coverage     · The repo already has docs/ with 3 quickstarts (chat-completions, agents,      opencoworker). How should I treat them? → Keep & integrate
+
+● Agent "Map MCP + tracing + toolkits" completed · 39m 0s
+
+● Agent "Map providers + framework" completed · 58m 9s
+
+● Agent "Map platform/OpenCoworker + cli + js" completed · 58m 7s
+
+● All four exploration agents returned detailed, accurate maps. You chose full
+  coverage + keep & integrate the existing quickstarts. Let me verify a few
+  remaining references before writing.
+
+● Bash(cd C:/Users/simon/Downloads/aisuite-main && echo "===.env.sample===" &&
+      cat .env.sample && echo "" && echo "===guides/===" && ls guides/ && echo
+      "" && echo "===…)
+  ⎿  Error: Exit code 2
+     ===.env.sample===
+     # OpenAI API Key
+     OPENAI_API_KEY=
+
+     # Anthropic API Key
+     ANTHROPIC_API_KEY=                                                         
+     # AWS SDK credentials
+     AWS_ACCESS_KEY_ID=
+     … +81 lines (ctrl+o to expand)
+
+● Bash(cd C:/Users/simon/Downloads/aisuite-main && echo "===platform files==="
+      && ls platform/ && echo "===platform/pyproject (scripts)===" && grep -A20
+      'scripts\]' pl…)
+  ⎿  ===platform files===
+     coworker
+     docs
+     … +42 lines (ctrl+o to expand)
+
+● I have complete, accurate technical detail across all components. Let me set
+  up task tracking and sanity-check the plan before writing ~35 files.
+
+● Advising using Fable 5
+  ⎿  Advisor unavailable (unavailable)
+
+● Advisor's unavailable — proceeding. I have everything I need. Let me create
+  the directory structure and write the full doc set.
+
+● Bash(cd C:/Users/simon/Downloads/aisuite-main/docs && mkdir -p overview
+      getting-started concepts guides reference components architecture/adr           troubleshooting && echo…)
+  ⎿  Directories created:
+     .
+     ./architecture
+     … +8 lines (ctrl+o to expand)
+
+● Now I'll write the docs. Starting with the navigation hub and overview layer.
+
+● Write(index.md)
+  ⎿  Wrote 44 lines to index.md
+      2 # aisuite documentation
+      3 `aisuite` is a lightweight Python library for building with LLMs,
+        n Agents API with tools and toolkits on top. This repo is also ho
+        me to OpenCoworker, a desktop AI coworker built on aisuite.
+      4
+        , then run the [Chat Completions quickstart](chat-completions-qui
+        ckstart.md).
+      7 ---
+      8
+      9 ## Documentation
+     … +57 lines (ctrl+o to expand)
+
+● Write(overview\what-is-this.md)
+  ⎿  Wrote 85 lines to overview\what-is-this.md
+      2 # What is aisuite?
+        call any LLM provider, plus an Agents API for turning those model
+      4 s into tool-using agents.
+      5 ## The problem it solves
+      7 Every LLM provider has its own SDK, its own request and response
+        OpenAI and then moving to Anthropic, Google, or a local Ollama mo
+        del normally means rewriting the integration. aisuite removes tha
+        ce and switch models by changing one string. OpenAI-style interfa
+      9 On top of that, building a tool-using agent usually means hand-wr
+        iting JSON schemas for every function, running the
+     … +126 lines (ctrl+o to expand)
+
+● Write(~\Downloads\aisuite-main\docs\overview\key-concepts.md)
+  ⎿  Wrote 113 lines to overview\key-concepts.md
+      2 # Key concepts
+        by layer.ns for every term that appears across the docs. Grouped
+      5 ## Chat Completions layer
+      6
+        rovider configurations and exposes `chat.completions.create(...)`
+        d lazily on first use.ions.create(...)`. Providers are initialize
+      8
+        gpt-4o` or `anthropic:claude-sonnet-4-6`. The part before the col
+         to that provider. A model string without a colon raises `ValueEr
+        ror`.
+     … +208 lines (ctrl+o to expand)
+
+● Now the getting-started layer:
+
+● Write(getting-started\prerequisites.md)
+  ⎿  Wrote 85 lines to getting-started\prerequisites.md
+      2 # Prerequisites
+      3 What you need before running aisuite. The quickstarts link here s
+        o there are no surprises mid-setup.
+      4
+      5 ## For the Python library
+      7 ### Python 3.10+
+      8 Verify: `python --version` (should print `Python 3.10.x` or highe
+        r).
+      9 Install: [python.org/downloads](https://www.python.org/downloads/
+        )
+     … +100 lines (ctrl+o to expand)
+
+● Write(getting-started\onboarding.md)
+  ⎿  Wrote 66 lines to getting-started\onboarding.md
+       2 # Onboarding: zero to hero
+         at aisuite is, how its layers relate, and why it's built the way
+          it is — before you write a line of code. If you just want to ru
+         at-completions-quickstart.md) and come back here later.rt](../ch
+       4
+       6 ## Start with an analogy
+          on purpose. You still write:hon SDK, aisuite will feel familiar
+       8
+      10 client.chat.completions.create(model=..., messages=..., temperat
+         ure=...)
+     … +148 lines (ctrl+o to expand)
+
+● Now the concepts deep-dives. Writing the chat-completions, providers, and
+  tool-calling concepts:
+
+● Write(concepts\chat-completions.md)
+  ⎿  Wrote 111 lines to concepts\chat-completions.md
+      2 # The Chat Completions API
+      3 The Chat Completions API is aisuite's foundation: one OpenAI-shap
+        calling, agents, OpenCoworker — is built on it.thing else — tool
+      4
+      5 ## What it is
+      7 A single method, `client.chat.completions.create(model, messages,
+         **kwargs)`, that accepts a `provider:model` string and produces
+        st.ormalized response regardless of which vendor served the reque
+      8
+      9 ## How a call flows
+     … +143 lines (ctrl+o to expand)
+
+● Write(~\Downloads\aisuite-main\docs\concepts\providers.md)
+  ⎿  Wrote 75 lines to concepts\providers.md
+       2 # Providers
+       3 A provider is an adapter that translates aisuite's unified reque
+         Providers are discovered by naming convention, so adding one is
+         a self-contained change.
+       4
+       6 ## The discovery convention
+       7 The `ProviderFactory` (in `aisuite/provider.py`) maps a provider
+       8  key to code by convention — there is no registry list to edit:
+       9 | Element | Rule | Example (`openai`) |
+      10 |---------|------|-------------------|
+     … +110 lines (ctrl+o to expand)
+
+● Write(concepts\tool-calling.md)
+  ⎿  Wrote 140 lines to concepts\tool-calling.md
+       2 # Tool calling
+         unctions and it generates the schemas, executes the calls, and f
+       4 eeds results back to the model.
+       5 ## What it is
+       7 Two styles share one entry point, `client.chat.completions.creat
+       8 e(..., tools=[...])`:
+       9 - **Automatic** — set `max_turns` and aisuite runs the whole loo
+         el stops requesting tools or the turn cap is hit.) until the mod
+         tool-call requests for you to execute, validate, or filter yours
+         elf.
+     … +171 lines (ctrl+o to expand)
+
+● Write(concepts\agents-api.md)
+  ⎿  Wrote 135 lines to concepts\agents-api.md
+       2 # The Agents API
+       3 The Agents API is the higher-level layer for longer-running, str
+         e `Runner`, which drives the tool loop and wires in policies, st
+         ate, artifacts, and tracing.
+       5 ## What it is
+       6
+       8 Two core types:
+       9 - **`Agent`** — a declarative, stateless definition of *what* to
+      10 - **`Runner`** — the executor that runs an agent to completion a
+         nd returns a `RunResult`.
+     … +173 lines (ctrl+o to expand)
+
+● Write(concepts\toolkits.md)
+  ⎿  Wrote 112 lines to concepts\toolkits.md
+      2 # Toolkits
+        gent. Each factory returns a list of callables ready to drop into
+         `tools=[...]`. Three ship in the box: `files`, `git`, `shell`.
+      5 ## What they are and why they're sandboxed
+      6
+        g shell commands — without giving it the run of your machine. Eve
+        irectory) and refuses any path that escapes it, raising `Permissi
+        onError`. Risky tools are marked with `ToolMetadata` so a [tool p
+      8 olicy](tool-policies.md) can gate them.
+      9 Import them from `ai.toolkits`:
+     … +141 lines (ctrl+o to expand)
+
+● Write(concepts\tool-policies.md)
+  ⎿  Wrote 115 lines to concepts\tool-policies.md
+      2 # Tool policies
+        . Policies are how you turn a capable agent into a *safe* one — a
+        dding allowlists, denials, and human approval gates without chang
+      4 ing the tools themselves.
+      5 ## What it is
+      7 A policy is an object with an `evaluate(context) -> ToolPolicyDec
+        suite calls the active policy with a `ToolPolicyContext` describi
+        ng the pending call. The policy returns a `ToolPolicyDecision`; i
+      8 f it's not allowed, the call is skipped and recorded as denied.
+      9 You attach a policy at run time:
+     … +144 lines (ctrl+o to expand)
+
+● Write(concepts\state-and-artifacts.md)
+  ⎿  Wrote 96 lines to ..\docs\concepts\state-and-artifacts.md
+      2 # State and artifacts
+      3 Two persistence mechanisms let agent runs outlive a single proces
+        s: **state stores** persist a conversation thread so it can resum
+        on't bloat the message history.* offload large payloads so they d
+      4
+      5 ## State stores
+      7 A state store persists a `RunState` — the serializable snapshot o
+        f a thread — keyed by a `thread_id`.
+      8
+      9 ### Creating and resuming a thread
+     … +131 lines (ctrl+o to expand)
+
+● Write(concepts\mcp.md)
+  ⎿  Wrote 113 lines to concepts\mcp.md
+      2 # MCP (Model Context Protocol)
+        ontextprotocol.io/docs/getting-started/intro) servers, so any MCP
+         server's tools can be handed to a model without boilerplate. Ins
+      4 tall the extra: `pip install 'aisuite[mcp]'`.
+      5 ## What it is
+      7 MCP is an open protocol for exposing tools (and other capabilitie
+        tions, you point aisuite at a server — launched as a subprocess (
+        stdio) or reached over HTTP — and it turns the server's tools int
+      8 o aisuite-compatible callables.
+      9 ## Two ways to use it
+     … +143 lines (ctrl+o to expand)
+
+● Write(concepts\tracing.md)
+  ⎿  Wrote 116 lines to concepts\tracing.md
+      2 # Tracing
+        alls, tool executions, approvals, errors — as structured events y
+        audit, and understand what an agent actually did. how you debug,
+      5 ## What it is
+      6
+        nks**. Sinks write events to a destination (a JSONL file, memory,
+        to runs, and the **viewer** renders them as timelines and transcr
+      8 ipts.
+        nything. The Runner opens a trace context, and even plain `client
+        .chat.completions.cre
+     … +147 lines (ctrl+o to expand)
+
+● Concepts done. Now the task-oriented guides:
+
+● Write(guides\add-a-provider.md)
+  ⎿  Wrote 102 lines to guides\add-a-provider.md
+       2 # Add a provider
+         aisuite discovers it by naming convention — there's no registry
+         to edit.
+       5 **When you need this:** a provider aisuite doesn't ship, or an i
+         nternal/self-hosted endpoint.
+       7 ## Prerequisites
+       9 - A local checkout of aisuite (`pip install -e .` or a Poetry de
+         v environment).
+         hape, and the response shape. If it's OpenAI-compatible, this is
+          trivial.
+     … +122 lines (ctrl+o to expand)
+
+● Write(guides\give-an-agent-tools.md)
+  ⎿  Wrote 115 lines to guides\give-an-agent-tools.md
+      2 # Give an agent tools
+      3 Attach capabilities to an agent — your own Python functions, preb
+        uilt toolkits, or both — so it can act, not just answer.
+      5 **When you need this:** any agent that must read files, call an A
+        PI, run a command, or otherwise do something beyond generating te
+        xt.
+      7 ## Prerequisites
+      8
+      9 - aisuite installed, with a working model string and key (see [pr
+        erequisites](../getting-started/prerequisites.md)).
+     … +132 lines (ctrl+o to expand)
+
+● Write(guides\require-approval-for-tools.md)
+  ⎿  Wrote 113 lines to guides\require-approval-for-tools.md
+       2 # Require approval for tools
+       3 Gate risky tool calls behind a human decision, so an agent can p
+       4 ropose an action but a person approves it before it runs.
+       5 **When you need this:** any agent that can write files, run shel
+       6 l commands, send messages, or take other irreversible actions.
+       7 ## Prerequisites
+       9 - An agent with tools (see [give an agent tools](give-an-agent-t
+         ools.md)).
+         ll as `requires_approval=True` — but metadata alone enforces not
+         hing; a policy does.
+     … +131 lines (ctrl+o to expand)
+
+● Write(guides\persist-and-resume-runs.md)
+  ⎿  Wrote 109 lines to guides\persist-and-resume-runs.md
+       2 # Persist and resume runs
+       3 Save an agent conversation so it survives a restart, and pick it
+          up later in another process — keyed by a `thread_id`.
+       5 **When you need this:** chat sessions that span requests, long t
+         asks that resume after a crash, or any multi-process harness.
+       6
+       8 ## Prerequisites
+       9 - An agent (see [give an agent tools](give-an-agent-tools.md)).
+      10 - For durable, concurrent storage: PostgreSQL and `pip install '
+         aisuite[postgres]'`.
+     … +123 lines (ctrl+o to expand)
+
+● Write(guides\connect-an-mcp-server.md)
+  ⎿  Wrote 115 lines to guides\connect-an-mcp-server.md
+       2 # Connect an MCP server
+       3 Give a model the tools from any Model Context Protocol server —
+         ng tool functions.r, a database server, your own — without writi
+       4
+       5 **When you need this:** reusing existing MCP servers, or sharing
+         top, Cursor, aisuite).on across MCP-compatible apps (Claude Desk
+       6
+       8 ## Prerequisites
+       9 - `pip install 'aisuite[mcp]'`.
+      10 - For npx-based servers: Node.js (`npx --version`).
+     … +134 lines (ctrl+o to expand)
+
+● Write(guides\view-traces.md)
+  ⎿  Wrote 99 lines to guides\view-traces.md
+      2 # View traces
+      3 Record what an agent did and inspect it in a local web viewer — m
+        odel calls, tool executions, approvals, errors, and artifacts, on
+      4  a timeline.
+      5 **When you need this:** debugging why an agent did something, aud
+        iting approvals, or sharing a run.
+      7 ## Prerequisites
+      8
+      9 - aisuite installed. The viewer ships bundled — no separate insta
+        ll.
+     … +112 lines (ctrl+o to expand)
+
+● Guides done. Now the reference layer — the authoritative lookups:
+
+● Write(reference\client-api.md)
+  ⎿  Wrote 145 lines to reference\client-api.md
+      2 # Reference: Client API
+      3 The `aisuite.Client` and its chat/audio interfaces. Import as `im
+        port aisuite as ai`.
+      4
+      5 ## Client
+      6
+      7 ```python
+      8 ai.Client(provider_configs: dict = {}, extra_param_mode: str = "w
+        arn")
+      9 ```
+     … +176 lines (ctrl+o to expand)
+
+● Write(reference\agents-api.md)
+  ⎿  Wrote 144 lines to reference\agents-api.md
+      1 # Reference: Agents API
+      2
+      3 `Agent`, `Runner`, and the run data types. Import from `aisuite`.
+      4
+      5 ## Agent
+      6
+      7 ```python
+      8 Agent(*, name, model, instructions=None, tools=[], model_settings
+        ={}, tags=[], metadata={})
+      9 ```
+     … +170 lines (ctrl+o to expand)
+
+● Write(reference\policies-and-stores.md)
+  ⎿  Wrote 143 lines to reference\policies-and-stores.md
+      1 # Reference: Policies, state stores, and artifact stores
+      2
+      3 The governance and persistence primitives. Import from `aisuite`.
+      4
+      5 ## Tool policies
+      6
+      7 A policy implements `evaluate(context: ToolPolicyContext) -> bool
+         | ToolPolicyDecision`.
+      8
+      9 ### Built-ins
+     … +155 lines (ctrl+o to expand)
+
+● Write(reference\toolkits.md)
+  ⎿  Wrote 96 lines to reference\toolkits.md
+       2 # Reference: Toolkits
+       3 The three built-in toolkits. Each factory returns a `list` of ca
+       2 # Reference: MCP
+       3 The `MCPClient` and config schema. Requires `pip install 'aisuit
+         e[mcp]'`. Import from `aisuite.mcp`.
+       4
+       5 ## MCPClient
+       6
+       7 ```python
+       8 MCPClient(command=None, args=None, env=None, server_url=None,
+       9           headers=None, timeout=30.0, name=None)
+      10 ```
+     … +109 lines (ctrl+o to expand)
+
+● Write(reference\tracing.md)
+  ⎿  Wrote 114 lines to reference\tracing.md
+       2 # Reference: Tracing
+       3 `TraceEvent`, sinks, stores, and the viewer. Import from `aisuit
+         e.tracing`.
+       4
+       5 ## TraceEvent
+       7 | Field | Type | Description |
+       8 |-------|------|-------------|
+       9 | `event_type` | TraceEventType | One of the event types below.
+         |
+      10 | `trace_id` | str | Run identity. |
+     … +125 lines (ctrl+o to expand)
+
+● Write(reference\providers.md)
+  ⎿  Wrote 69 lines to reference\providers.md
+       2 # Reference: Providers
+       3 Every provider aisuite ships, its class, the `pip` extra it need
+         n a `provider:model` string.Use the provider key as the prefix i
+       4
+       5 ## Provider table
+       7 | Key | Class | `pip` extra | SDK / mechanism | Auth (env var) |
+       8 |-----|-------|-------------|-----------------|----------------|
+         I_API_KEY` | `OpenaiProvider` | `openai` | `openai` SDK | `OPENA
+      10 | `anthropic` | `AnthropicProvider` | `anthropic` | `anthropic`
+         SDK | `ANTHROPIC_API_KEY` |
+     … +95 lines (ctrl+o to expand)
+
+● Write(reference\configuration.md)
+  ⎿  Wrote 106 lines to reference\configuration.md
+      2 # Reference: Configuration and environment
+      3 How to configure aisuite: provider credentials, installable extra
+        s, and the default file locations.
+      4
+      5 ## Provider credentials
+      6
+      7 Two ways to supply credentials; environment variables are the def
+        ault.
+      8
+      9 ### Environment variables
+     … +115 lines (ctrl+o to expand)
+
+● Reference done. Now the components layer:
+
+● Write(components\aisuite-js.md)
+  ⎿  Wrote 118 lines to ..\docs\components\aisuite-js.md
+      2 # aisuite-js (TypeScript)
+      3 A TypeScript/JavaScript port of aisuite's Chat Completions layer
+
+● Write(components\cli.md)
+  ⎿  Wrote 66 lines to components\cli.md
+      2 # aisuite-code CLI
+        ersation loop scoped to a project directory, with file and shell
+        tools and trace output for the viewer. Source: [`cli/py/`](https:
+      4 //github.com/andrewyng/aisuite/tree/main/cli/py).
+      5 ## What it is
+      7 `aisuite-code` is a terminal coding assistant — a small reference
+        working together. It reads and (with approval) edits files in a w
+        orking directory, runs a restricted set of shell commands, and wr
+      8 ites traces you can open in the aisuite viewer.
+      9 ## Install and run
+     … +80 lines (ctrl+o to expand)
+
+● Write(components\opencoworker.md)
+  ⎿  Wrote 98 lines to components\opencoworker.md
+      2 # OpenCoworker
+        adable app and the reference harness for building your own. Sourc
+        latform).form/`](https://github.com/andrewyng/aisuite/tree/main/p
+      5 To install and use the app, see the [OpenCoworker quickstart](../
+        opencoworker-quickstart.md). This page is for developers who want
+      6  to understand or extend the harness.
+      8 ## What it is
+         a folder, give it a task in plain language, and it researches, a
+        tions, scheduled automations, MCP integrations, and a built-in tr
+        ace viewer. It has no ba
+     … +126 lines (ctrl+o to expand)
+
+● Write(components\viewer-ui.md)
+  ⎿  Wrote 70 lines to components\viewer-ui.md
+      2 # viewer-ui (trace viewer)
+         transcripts, tool calls, approvals, and artifacts. Source: [`vie
+        i).-ui/`](https://github.com/andrewyng/aisuite/tree/main/viewer-u
+      4
+      6 ## What it is
+         [viewer server](../reference/tracing.md#viewer) (`aisuite/tracin
+        g/viewer.py`). The built output is bundled into the Python packag
+        r without ever building it. `viewer-ui/` is the source you edit t
+      8 o change the UI.
+      9 ## Tech stack
+     … +82 lines (ctrl+o to expand)
+
+● Now the architecture layer — system design and ADRs:
+
+● Write(architecture\system-design.md)
+  ⎿  Wrote 103 lines to architecture\system-design.md
+       2 # System design
+       3 How aisuite is built, for developers who will work on it (not ju
+         st use it). The reader-facing concepts live in [concepts/](../co
+         ncepts/); this is the architecture beneath them.
+       4
+       6 ## High-level architecture
+       7 ```
+       8 ┌──────────────────────────────────────────────────────────────┐
+       9 │                        OpenCoworker                          │
+      10 │        (platform/ — FastAPI + React, approvals, cron)        │
+     … +153 lines (ctrl+o to expand)
+
+● Write(architecture\adr\0001-provider-naming-convention.md)
+  ⎿  Wrote 47 lines to
+     ..\docs\architecture\adr\0001-provider-naming-convention.md
+       2 # ADR 0001: Convention-based provider discovery
+       3 **Status:** Accepted
+       5 ## Context
+       2 # ADR 0002: Generate tool schemas from Python functions
+       3 **Status:** Accepted
+       4
+       6 ## Context
+       7 To let a model call tools, providers need a JSON Schema for each
+          tool — name, parameters, types, descriptions, required fields.
+       8 The question was where that schema comes from.
+       9 Constraints:
+      10 - The information a schema needs (parameter names, types, descri
+         ptions) already exists in a typed, documented Python function.
+     … +67 lines (ctrl+o to expand)
+
+● Write(architecture\adr\0003-tool-policies-and-approvals.md)
+  ⎿  Wrote 47 lines to architecture\adr\0003-tool-policies-and-approvals.md
+       2 # ADR 0003: Tool governance as a separate policy primitive
+       3 **Status:** Accepted
+       5 ## Context
+       6
+       7 Agents that can write files or run shell commands need governanc
+         he question was where that governance lives.for risky actions. T
+       8
+      10 - The same tool should be ungated in one context (a trusted batc
+         h job) and approval-gated in another (an interactive desktop app
+         ), without changing the tool.
+     … +71 lines (ctrl+o to expand)
+
+● Write(architecture\adr\0004-local-first-tracing.md)
+  ⎿  Wrote 46 lines to architecture\adr\0004-local-first-tracing.md
+       2 # ADR 0004: Local-first tracing with a bundled viewer
+       3 **Status:** Accepted
+       5 ## Context
+       6
+         call, tool execution, and approval. aisuite needed observability
+         . The question was what shape it should take — and crucially, wh
+       8 at it should *require*.
+       9 Constraints:
+         o server; keys and data stay on the user's machine. Tracing must
+          not break that promise.
+     … +68 lines (ctrl+o to expand)
+
+● Now the ADR index and troubleshooting:
+
+● Write(architecture\adr\README.md)
+  ⎿  Wrote 12 lines to architecture\adr\README.md
+       2 # Architecture Decision Records
+       3 Records of the non-obvious decisions in aisuite — so future engi
+       4 neers understand the trade-offs before changing them.
+       5 | ADR | Decision | Status |
+       7 | [0001](0001-provider-naming-convention.md) | Convention-based
+         provider discovery | Accepted |
+         hemas from Python functions | Accepted |s.md) | Generate tool sc
+       9 | [0003](0003-tool-policies-and-approvals.md) | Tool governance
+      10 | [0004](0004-local-first-tracing.md) | Local-first tracing with
+          a bundled viewer | Accepted |
+     … +9 lines (ctrl+o to expand)
+
+     42
+     … +8 lines (ctrl+o to expand)
+
+● Found one broken link. Let me fix it and run a comprehensive cross-link check.
+
+● Update(components\cli.md)
+  ⎿  Added 1 line, removed 1 line
+      51  - **Read-only by default.** File reads and searches run freely;
+           writes and shell commands require approval (a `RequireApproval
+          Policy` over the [files](../concepts/toolkits.md) and [shell](.
+          ./concepts/toolkits.md) toolkits).
+      52  - **Restricted shell.** Only a safe command set (git, npm, pyth
+          on, …) is allowed unless `--allow-shell-all`.
+      53  - **Reviewer subagent.** A read-only `review_changes(input)` su
+          bagent is available to the main agent (disable with `--no-revie
+          wer`) — an example of [subagents via `agent_tool`](../concepts/
+          agents-api.md#subagents).
+      54 -- **Traces.** Runs are written as JSONL and viewable in the [ai
+         -suite viewer](view-traces). Use `--viewer` or `/viewer start`.
+      54 +- **Traces.** Runs are written as JSONL and viewable in the [ai
+         +suite viewer](../guides/view-traces.md). Use `--viewer` or `/vi
+         +ewer start`.
+      55
+      56  See `cli/py/aisuite-code-cli/TRY_IT.md` for a hands-on walkthro
+          ugh.
+      57
+
+● Bash(cd C:/Users/simon/Downloads/aisuite-main/docs && python3 - <<'EOF'
+      import re, os…)
+  ⎿  All internal links resolve.
+
+● All links resolve. Let me check for orphaned files and verify terminology
+  consistency.
+
+● Bash(cd C:/Users/simon/Downloads/aisuite-main/docs && python3 - <<'EOF'
+      import re, os…)
+  ⎿  No orphans   every file is reachable.
+
+     Total md files: 42
+
+● Everything validates. Let me produce the final structure overview.
+
+● Bash(cd C:/Users/simon/Downloads/aisuite-main/docs && find . -name '*.md' |
+      sort | sed 's|^\./||')
+  ⎿  agents-quickstart.md
+     architecture/adr/0001-provider-naming-convention.md
+     architecture/adr/0002-tools-from-python-functions.md
+     … +39 lines (ctrl+o to expand)
+
+● Documentation complete. Here's what I built and verified.
+
+  ✓ Created 39 new files in docs/ (42 total, integrating the 3 existing
+  quickstarts)
+  ✓ Cross-links verified — all 100+ internal links resolve
+  ✓ No orphans — every file reachable from index.md or a parent
+  ✓ No stubs detected
+
+  Entry point: docs/index.md
+  Onboarding:  docs/getting-started/onboarding.md
+
+  What I did
+
+  Audit (Phase 1) — Read the README, pyproject.toml, the core
+  client.py/agents/types.py, and dispatched four parallel Explore agents to map
+  every subsystem accurately (providers/framework, the agents internals,
+  MCP/tracing/toolkits, and the platform/CLI/JS/viewer components). All facts in
+  the docs — signatures, field names, risk levels, env vars — come from the
+  actual source, not memory.
+
+  IA (Phase 2) — Used a Multi-Component-System structure (your "full coverage"
+  choice), preserving the 3 existing quickstarts in place and building the full
+  tree around them.
+
+  Wrote (Phase 3) — 39 files across the standard sections:
+
+  ┌──────────────────┬───────────────────────────────────────────────────────┐
+  │     Section      │                         Files                         │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │ overview/        │ what-is-this, key-concepts (full glossary)            │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │ getting-started/ │ prerequisites, onboarding (zero-to-hero)              │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │                  │ 9 deep dives: chat-completions, providers,            │
+  │ concepts/        │ tool-calling, agents-api, toolkits, tool-policies,    │
+  │                  │ state-and-artifacts, mcp, tracing                     │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │                  │ 6 task how-tos: add-a-provider, give-an-agent-tools,  │
+  │ guides/          │ require-approval, persist-and-resume, connect-mcp,    │
+  │                  │ view-traces                                           │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │                  │ 8 complete references: client-api, agents-api,        │
+  │ reference/       │ policies-and-stores, toolkits, mcp, tracing,          │
+  │                  │ providers, configuration                              │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │ components/      │ aisuite-js, cli, opencoworker, viewer-ui              │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │ architecture/    │ system-design + 4 ADRs (provider convention,          │
+  │                  │ fn→schema, policies, local-first tracing)             │
+  ├──────────────────┼───────────────────────────────────────────────────────┤
+  │ troubleshooting/ │ common-issues (14 real errors, symptom→cause→fix)     │
+  └──────────────────┴───────────────────────────────────────────────────────┘
+
+  Validate (Phase 4) — Ran a link checker (all resolve), an orphan checker
+  (none), and a stub scan (clean). The single TODO match is intentional prose
+  describing a real code-level TODO (provider init isn't yet thread-safe), not a
+  doc stub.
+
+  Two notes on accuracy worth flagging: the provider env-var table and the pip
+  extras come straight from .env.sample and pyproject.toml; and the OpenCoworker
+  page documents it as a FastAPI + React (Tauri) harness sourced from the
+  parent worktree, matching platform/.
+
+  Start at docs/index.md — it's the navigation hub linking everything.
+
+✻ Cogitated for 47m 10s
+
+※ recap: I documented the aisuite repo for the technical-docs-writer skill,       creating 39 new files in docs/ with full coverage and all links validated. The  docs are complete; next you could review docs/index.md or request changes.      (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────── aisuite ──
+> 
+────────────────────────────────────────────────────────────────────────────────
+  | Opus 4.8 (1M context) | docs | ctx 23% | 5h 36% | 7d 28% |      /rc active
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · ← for agents
+
