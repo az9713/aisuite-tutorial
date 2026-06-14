@@ -34,6 +34,24 @@
 
 <br>
 
+> ### 🛠️ Worked example: a multi-agent CLI — [`projects/research-desk`](projects/research-desk/)
+>
+> A small, runnable app built on the aisuite Agents API: a lead agent coordinates a
+> **planner → researcher → critic → writer** team over a folder of your own notes, with
+> model selection across **OpenAI, Anthropic, Gemini, and OpenRouter**, and **persistent
+> conversation memory** that resumes across restarts. The shortest path from the docs to
+> working multi-agent code.
+>
+> ```bash
+> python projects/research-desk/desk.py          # pick a provider, then chat
+> python projects/research-desk/desk.py --trace  # show the planner→researcher→critic→writer hand-offs
+> ```
+>
+> Drop `.txt`/`.md` files into `projects/research-desk/notes/`, then ask about them. See a
+> real run in [`example-session.txt`](projects/research-desk/example-session.txt).
+
+<br>
+
 #  aisuite
 
 [![PyPI](https://img.shields.io/pypi/v/aisuite)](https://pypi.org/project/aisuite/)

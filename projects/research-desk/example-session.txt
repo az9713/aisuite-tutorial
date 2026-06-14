@@ -1,0 +1,88 @@
+# Example session - projects/research-desk
+# A real run (personal paths sanitized). Shows the multi-agent team
+# (planner -> researcher -> critic -> writer), persistent memory across
+# restarts, and the --trace step view.
+
+$  python projects/research-desk/desk.py --reset
+Conversation cleared.
+
+Research Desk - new conversation.
+
+Choose a provider:
+  1. openai        openai:gpt-4o-mini
+  2. anthropic     anthropic:claude-sonnet-4-6
+  3. google        google:gemini-2.0-flash
+  4. openrouter    you choose the model
+-> 1
+
+Model: openai:gpt-4o-mini
+
+you> explain big bang to me in simple terms
+  [team] planner -> researcher -> researcher -> researcher -> researcher -> researcher -> critic -> writer
+
+desk> The Big Bang Theory is a widely accepted cosmological model that describes the origin and evolution of our universe. Here’s a concise overview of its main   - **Structure Formation**: Over time, gravity caused these atoms to cluster, leading to the formation of stars and galaxies.
+   - **Cosmic Microwave Background (CMB)**: About 380,000 years after the Big Bang, the universe cooled sufficiently for light to travel freely, resulting in the CMB radiation we observe today.
+
+4. **Galactic Formation**: Post-Big Bang, gravitational forces created variations in matter density, fostering the creation of stars, galaxies, and larger cosmic structures.
+
+5. **Supporting Evidence**:
+   - **Expansion of the Universe**: Observations show that galaxies are receding from us, with their velocity correlating to distance (Hubble's Law).
+   - **CMB Radiation**: The uniform radiation detected throughout the universe is a remnant of the early universe's heat.
+   - **Element Abundance**: The observed ratios of light elements (hydrogen, helium, lithium) align with predictions made by the Big Bang Theory.
+   - **Large-Scale Structure**: The distribution patterns of galaxies support the Big Bang model.
+
+In conclusion, the Big Bang Theory offers a comprehensive understanding of the universe's origins and its subsequent evolution over billions of years.
+
+you> quit
+
+user@host MINGW64 ~/aisuite-main (main)
+$  python projects/research-desk/desk.py
+Resuming conversation (revision 1, model: openai:gpt-4o-mini).
+Type 'quit' or run with --reset to start fresh.
+
+you> what did I just ask you about
+  [team] planner -> researcher -> researcher -> researcher -> researcher -> researcher -> critic -> writer
+
+desk> You asked me to explain the Big Bang in simple terms.
+
+you> quit
+
+user@host MINGW64 ~/aisuite-main (main)
+$  python projects/research-desk/desk.py --trace
+Resuming conversation (revision 3, model: openai:gpt-4o-mini).
+Type 'quit' or run with --reset to start fresh.
+
+you> what did i ask you about
+  [trace]
+    - agent: desk
+    - model_response: model_response
+    - model_response: model_response
+    - model_response: model_response
+    - model_response: model_response
+    - model_response: model_response
+    - tool_call: planner (allowed=True)
+    - tool_result: planner (status=success)
+    - tool_call: researcher (allowed=True)
+    - tool_result: researcher (status=success)
+    - tool_call: researcher (allowed=True)
+    - tool_result: researcher (status=success)
+    - tool_call: researcher (allowed=True)
+    - tool_result: researcher (status=success)
+    - tool_call: researcher (allowed=True)
+    - tool_result: researcher (status=success)
+    - tool_call: researcher (allowed=True)
+    - tool_result: researcher (status=success)
+    - tool_call: critic (allowed=True)
+    - tool_result: critic (status=success)
+    - tool_call: writer (allowed=True)
+    - tool_result: writer (status=success)
+    - agent: desk
+    - model_response: model_response
+    - agent: desk
+    - model_response: model_response
+    - agent: desk
+    - model_response: model_response
+
+desk> You asked me to explain the Big Bang in simple terms.
+
+you>

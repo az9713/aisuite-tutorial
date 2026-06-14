@@ -1,0 +1,5 @@
+# Local API keys
+.env
+
+# Runtime conversation state (created on each run)
+.aisuite/
