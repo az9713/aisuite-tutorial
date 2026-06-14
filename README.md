@@ -15,25 +15,6 @@
 
 <br>
 
-> ![NEW](https://img.shields.io/badge/%E2%9C%A8_NEW-8250df?style=for-the-badge)
-> ## OpenCoworker
-> **An AI agent that lives on your desktop, built on aisuite.**
->
-> OpenCoworker is a desktop AI agent that can not only chat, but also do deep research and carry out tasks for
-> you on your computer. It can read files (with permission) to gain context, read/send messages (slack, email, etc.),
-> and create real deliverables like PDF reports, documents, spreadsheets. It also supports scheduled automations,
-> such as providing you a daily news summary. 
->
-> Requires bringing your own API key (OpenAI, Anthropic, Google) or run fully local with Ollama.
->
-> [**⬇ Download for macOS**](https://github.com/andrewyng/aisuite/releases/latest/download/OpenCoworker-macos-arm64.dmg)
-> &nbsp;&nbsp;•&nbsp;&nbsp;
-> [**⬇ Download for Windows**](https://github.com/andrewyng/aisuite/releases/latest/download/OpenCoworker-windows-setup.exe)
->
-> <sub>macOS 13+ (Apple Silicon) &nbsp;·&nbsp; Windows 10/11 (x64) &nbsp;·&nbsp; your keys and your data stay on your machine</sub>
-
-<br>
-
 > ### 🛠️ Worked example: a multi-agent CLI — [`projects/research-desk`](projects/research-desk/)
 >
 > A small, runnable app built on the aisuite Agents API: a lead agent coordinates a
@@ -49,6 +30,25 @@
 >
 > Drop `.txt`/`.md` files into `projects/research-desk/notes/`, then ask about them. See a
 > real run in [`example-session.txt`](projects/research-desk/example-session.txt).
+
+<br>
+
+> [![NEW](https://img.shields.io/badge/%E2%9C%A8_NEW-8250df?style=for-the-badge)](docs/opencoworker-quickstart.md)
+> ## OpenCoworker
+> **An AI agent that lives on your desktop, built on aisuite.**
+>
+> OpenCoworker is a desktop AI agent that can not only chat, but also do deep research and carry out tasks for
+> you on your computer. It can read files (with permission) to gain context, read/send messages (slack, email, etc.),
+> and create real deliverables like PDF reports, documents, spreadsheets. It also supports scheduled automations,
+> such as providing you a daily news summary. 
+>
+> Requires bringing your own API key (OpenAI, Anthropic, Google) or run fully local with Ollama.
+>
+> [**⬇ Download for macOS**](https://github.com/andrewyng/aisuite/releases/latest/download/OpenCoworker-macos-arm64.dmg)
+> &nbsp;&nbsp;•&nbsp;&nbsp;
+> [**⬇ Download for Windows**](https://github.com/andrewyng/aisuite/releases/latest/download/OpenCoworker-windows-setup.exe)
+>
+> <sub>macOS 13+ (Apple Silicon) &nbsp;·&nbsp; Windows 10/11 (x64) &nbsp;·&nbsp; your keys and your data stay on your machine</sub>
 
 <br>
 
