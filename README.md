@@ -29,7 +29,9 @@
 > ```
 >
 > Drop `.txt`/`.md` files into `projects/research-desk/notes/`, then ask about them. See a
-> real run in [`example-session.txt`](projects/research-desk/example-session.txt).
+> real run in [`example-session.txt`](projects/research-desk/example-session.txt), and a deep
+> dive on how the team is orchestrated (and how to read the traces) in
+> [`ORCHESTRATION.md`](projects/research-desk/ORCHESTRATION.md).
 
 <br>
 
